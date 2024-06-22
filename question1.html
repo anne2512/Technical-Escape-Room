@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    
+</head>
+<body>
+    <div id="question1">
+        <h2>Question 1</h2>
+        <p>Fill in the missing tag to create a paragraph:</p>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Fill in the Blanks - HTML Code Challenge</title>
+        </head>
+        <body>
+            <h1>Fill in the Blanks - HTML Code Challenge</h1>
+            
+            <textarea id="htmlCode" rows="10" cols="100" readonly >
+                <!DOCTYPE <input type="text" id="doctype" placeholder="_________________">
+                <html lang="en">
+                <head></head>
+                <meta charset="<input type="text" id="charset" placeholder="_______________">">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title></title><input type="text" id="title" placeholder="_______________"></title>
+                </head>
+                <body>
+                    <h1>Hello, World!</h1>
+                    <p>This is a simple HTML page.</p>
+                    <img src="example.jpg" alt="Example Image">
+                    <a href="https://www.example.com">Visit Example Website</a>
+                </body>
+            </html>
+        </textarea>
+        <br>
+        <form>
+            <label for="doctype">Blank 1</label>
+            <input type="text" id="doctype" placeholder="Enter the doctype">
+            <br>
+            <label for="charset">Blank 2</label>
+            <input type="text" id="charset" placeholder="Enter the charset">
+            <br>
+            <label for="title">Blank 3</label>
+            <input type="text" id="title" placeholder="Enter the title">
+            <br>
+            
+        </form>
+        
+        <button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Add more questions similarly -->
+
+    
+
+    <script>
+        function checkAnswers() {
+            var doctype = document.getElementById("doctype").value.trim();
+            var charset = document.getElementById("charset").value.trim();
+            var title = document.getElementById("title").value.trim();
+
+            var correctDoctype = "html";
+            var correctCharset = "UTF-8";
+            var correctTitle = "HTML Page";
+
+            var result = document.getElementById("result");
+
+            if (doctype.toLowerCase() === correctDoctype && charset === correctCharset && title === correctTitle) {
+                result.innerHTML = "All answers are correct!";
+                // Redirecting to another page
+                var popup = document.createElement("div");
+                popup.innerHTML = "<p style='position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 2px solid black;'>And the Code is '8'</p>";
+                document.body.appendChild(popup);// Replace with your desired URL
+            } else {
+                result.innerHTML = "Incorrect answer(s). Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>

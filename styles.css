@@ -1,0 +1,19 @@
+#codePuzzle {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#codeContainer {
+    border: 1px solid #000;
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+.codePiece {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
